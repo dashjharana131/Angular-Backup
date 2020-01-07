@@ -1,0 +1,63 @@
+<!-- <h1>Welcome to Besant Technology</h1>
+<h1 [class]="text-success">Welcome</h1> -->
+<!-- <h1 [class.text-danger] = "hasError">Welcome</h1> -->
+<!--ngClass is angular attribute for class binding,ngstyle for style binding-->
+<!-- <h1 [ngClass]="messagecLass">Welcome</h1>
+<p [style.color]="'green'">Welcome</p>
+<p [style.color] = "hasError ? 'red' : 'blue'">Welcome</p>
+<p [style.color] = "highlightColor">Welcome</p>
+<p [ngStyle] = "titleStyle">Tanima</p>
+<button type="button" (mouseover) = "Tanima($event);">Click Me</button>
+<h1>{{name}}</h1> -->
+<!--ngModel for 2 way binding-->
+<!-- <input type ="text"  [(ngModel)] = "uname" />
+{{uname}} -->
+<!--directives like ngif ,ngswitch-->
+<!-- <h1 *ngIf="isActive">Tanima</h1> -->
+<!--otherwise is just a reference variable name-->
+<!-- <h1 *ngIf="isActive else otherwise;">Tanima</h1> 
+<ng-template #otherwise><h1>User</h1></ng-template> -->
+<!--then is a key word here,thenblock,-->
+<!-- <div *ngIf = "isActive then thenblock; else elseblock;"></div>
+<ng-template #thenblock><h1>User Logged In</h1></ng-template>
+<ng-template #elseblock><h1>User Not Logged In</h1></ng-template>
+<div [ngSwitch] = "color">
+<div *ngSwitchCase="'red'">You have picked red color</div>
+<div *ngSwitchCase="'green'">You have picked green color</div>
+<div *ngSwitchCase="'blue'">You have picked blue color</div>
+<div *ngSwitchCase="'yellow'">You have picked yellow color</div>
+<div *ngSwitchDefault>You have not picked any color</div>
+</div> -->
+<!---->
+<!-- <ul *ngFor = "let name of names; odd as i">
+<li>{{i}}-->
+<!-- </ul> --> 
+<!--titlecase,lowercase,uppercase,slice:3,slice:3:5-->
+<!-- <h1>{{myName | slice:3:5}}</h1>
+{{employees | json}}
+<h2>{{5.67 | number:'2.3-5'}}</h2>
+<h2>{{5.67 | number:'1.1-3'}}</h2>
+<h2>{{25.7964 | number:'3.1-3'}}</h2>
+<h2>{{25.7966 | number:'3.1-3'}}</h2>
+<h2>{{0.25 | percent}}</h2>
+<h2>{{2550 | currency:'INR'}}</h2>
+<h2>{{2550 | currency:'USD':'code'}}</h2>
+<h1>{{date1}}</h1>
+<h1>{{date1 | date}}</h1>
+<h1>{{date1 | date:'short'}}</h1>
+<h1>{{date1 | date:'shortDate'}}</h1> -->
+<!--employeeTitle is the pipe decorator name-->
+<!-- <ul *ngFor = "let emp of employees; index as i">
+<li>{{emp.name | employeeTitle:emp.gender }} {{emp.age}}</li> -->
+<!-- <li>{{emp.name | employeesTitle: emp.gender}}</li> -->
+<!-- </ul>
+{{parentData}}
+<button (click)="fireEvent();">Send Data</button> -->
+<h1>Employee Details</h1>
+ <ul *ngFor = "let emp of employees; index as i">
+<li>{{emp.id}}-{{emp.body}}</li>
+ </ul>
+
+
+
+
