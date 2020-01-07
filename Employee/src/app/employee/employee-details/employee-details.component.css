@@ -1,0 +1,13 @@
+/* h1
+{background-color: blue;
+    color: white;
+} */
+.text-success{
+    color: blue;
+}
+.text-danger{
+    color: red;
+}
+.text-special{
+    font-style: italic;
+}

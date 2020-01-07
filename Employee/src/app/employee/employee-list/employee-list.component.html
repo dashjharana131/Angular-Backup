@@ -1,0 +1,6 @@
+<!-- <p>employee-list works!</p> -->
+<h1>Employee List</h1>
+<ul *ngFor = "let emp of employees; index as i">
+    <li>{{emp.id}}-{{emp.title}}</li>
+     </ul>
+     <input type="submit" value="Add Employee" (click)="gotoAddEmp();">

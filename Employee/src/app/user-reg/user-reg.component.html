@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <h1>User Registration Form</h1>
+    {{userForm.value|json}}
+    <hr>
+    {{UserModel|json}}
+    <form #userForm="ngForm">
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" class="form-control" id="uname" name="uname" [(ngModel)]="UserModel.uname">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="UserModel.email">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="number" class="form-control" id="phone" name="phone" [(ngModel)]="UserModel.phone">
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select class="custom-select" name="country" [(ngModel)]="UserModel.country">
+                <option selected value="">--Select Country--</option>
+                <option *ngFor="let c of country">{{c}}</option>
+            </select>
+        </div>
+        <!-- <div ng.ModelGroup="address">
+            <div class="form-group">
+                <label for="street">Street</label>
+                <input type="text" class="form-control" id="street" ngModel name="street">
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" ngModel name="city">
+            </div>
+            <div class="form-group">
+                <label for="ps">Police Station</label>
+                <input type="text" class="form-control" id="ps" ngModel name="ps">
+            </div>
+        </div> -->
+        <div class="mb-3">
+            <label for="gender">Gender</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="gender" value="male"
+                    [(ngModel)]="UserModel.gender" />
+                <label class="form-check-label">Male</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="gender" value="female"
+                    [(ngModel)]="UserModel.gender" />
+                <label class="form-check-label">Female</label>
+            </div>
+        </div>
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" name="agree" [(ngModel)]="UserModel.agree" />
+            <label class="form-check-label">I Agree</label>
+        </div>
+        <!-- <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 bg-primary">div</div>
+        <div class="col-lg-3 col-md-6 col-sm-12 bg-success">div</div>
+        <div class="col-lg-3 col-md-6 col-sm-12 bg-info">div</div>
+        <div class="col-lg-3 col-md-6 col-sm-12 bg-danger">div</div>
+    </div> -->
+        <button class="btn btn-primary">Submit</button>
+    </form>
+    {{userForm.value|json}}
+    <hr>
+    {{UserModel|json}}
+</div>
